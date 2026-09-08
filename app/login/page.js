@@ -8,22 +8,6 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
-  async function signUp() {
-    setMessage("");
-
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-    });
-
-    if (error) {
-      setMessage(error.message);
-      return;
-    }
-
-    setMessage("회원가입 완료! 이메일 인증 후 로그인해주세요.");
-  }
-
   async function signIn() {
     setMessage("");
 
@@ -45,8 +29,8 @@ export default function LoginPage() {
       <div className="loginCard">
         <div className="loginLogo">BlueDive</div>
 
-        <h1>바다로 들어갈 준비가 됐나요?</h1>
-        <p>프리다이버들과 포인트를 공유해보세요.</p>
+        <h1>다시 바다로.</h1>
+        <p>BlueDive 계정으로 로그인하세요.</p>
 
         <input
           type="email"
@@ -57,7 +41,7 @@ export default function LoginPage() {
 
         <input
           type="password"
-          placeholder="비밀번호 (6자 이상)"
+          placeholder="비밀번호"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
@@ -66,13 +50,19 @@ export default function LoginPage() {
           로그인
         </button>
 
-        <button className="loginSecondary" onClick={signUp}>
-          회원가입
-        </button>
-
         {message && <div className="loginMessage">{message}</div>}
 
-        <a href="/">← 홈으로 돌아가기</a>
+        <div className="authDivider">
+          <span>아직 회원이 아니신가요?</span>
+        </div>
+
+        <a className="signupLinkButton" href="/signup">
+          BlueDive 회원가입
+        </a>
+
+        <a className="backHome" href="/">
+          ← 홈으로 돌아가기
+        </a>
       </div>
     </main>
   );
