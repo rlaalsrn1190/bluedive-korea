@@ -59,22 +59,6 @@ export default function SignupPage() {
       return;
     }
 
-    if (data.user) {
-      const { error: profileError } = await supabase
-        .from("profiles")
-        .insert({
-          id: data.user.id,
-          nickname,
-          diver_level: diverLevel,
-        });
-
-      if (profileError) {
-        setLoading(false);
-        setMessage("계정은 생성됐지만 프로필 저장에 실패했습니다.");
-        return;
-      }
-    }
-
     setLoading(false);
     setMessage("회원가입 완료! 이메일 인증 후 로그인해주세요.");
   }
