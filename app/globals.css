@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6fbfd;
+  color: #06354a;
+}
+
+button {
+  cursor: pointer;
+}
+
+.header {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  background: rgba(255,255,255,0.96);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: #057a9f;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+}
+
+nav a {
+  color: #17485b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.loginBtn {
+  border: 1px solid #17aac5;
+  background: white;
+  color: #0685a8;
+  padding: 10px 22px;
+  border-radius: 24px;
+}
+
+.hero {
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  padding: 70px 8%;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 35, 54, 0.9),
+      rgba(0, 84, 110, 0.45)
+    ),
+    radial-gradient(
+      circle at 75% 30%,
+      #38d5df,
+      #056887 45%,
+      #01344e 80%
+    );
+  color: white;
+}
+
+.heroOverlay {
+  max-width: 700px;
+}
+
+.smallText {
+  color: #5be4ec;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.12;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 15px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.primaryBtn {
+  border: none;
+  background: #18d0dc;
+  color: #00394c;
+}
+
+.secondaryBtn {
+  border: 1px solid rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.features {
+  max-width: 1180px;
+  margin: -38px auto 70px;
+  padding: 28px;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 15px 50px rgba(0, 83, 110, 0.12);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.features div {
+  text-align: center;
+  border-right: 1px solid #e4f1f4;
+}
+
+.features div:last-child {
+  border-right: none;
+}
+
+.features span {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.features strong {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.features p {
+  color: #6b8c98;
+  font-size: 14px;
+}
+
+.content {
+  max-width: 1180px;
+  margin: auto;
+  padding: 20px;
+}
+
+.sectionTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.sectionTitle span {
+  font-size: 13px;
+  color: #16a9c3;
+  font-weight: 800;
+}
+
+.sectionTitle h2 {
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+.sectionTitle button {
+  background: none;
+  border: none;
+  color: #0785a5;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.cards article {
+  overflow: hidden;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 10px 35px rgba(20, 78, 96, 0.09);
+}
+
+.cardImage {
+  height: 230px;
+}
+
+.ocean1 {
+  background: linear-gradient(145deg, #0aaec8, #05486d);
+}
+
+.ocean2 {
+  background: linear-gradient(145deg, #51dce1, #047496);
+}
+
+.ocean3 {
+  background: linear-gradient(145deg, #20bec8, #073e5c);
+}
+
+.cardContent {
+  padding: 20px;
+}
+
+.cardContent p {
+  color: #0b9bb7;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.cardContent h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.cardContent span {
+  color: #668b97;
+  font-size: 14px;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 90px;
+  padding: 80px 20px;
+  background: #013e58;
+  color: white;
+}
+
+.cta p {
+  color: #54d7e1;
+  margin-bottom: 8px;
+}
+
+.cta h2 {
+  font-size: 34px;
+  margin-bottom: 24px;
+}
+
+.cta button {
+  border: none;
+  background: #20d1dd;
+  color: #003c50;
+  border-radius: 28px;
+  padding: 15px 28px;
+  font-weight: 800;
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .features {
+    margin: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .features div {
+    border: none;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
