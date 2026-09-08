@@ -364,3 +364,94 @@ nav a {
   text-decoration: none;
   font-size: 14px;
 }
+.authDivider {
+  margin: 24px 0 14px;
+  text-align: center;
+  color: #8099a2;
+  font-size: 13px;
+}
+
+.signupLinkButton {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #13bcd0;
+  border-radius: 12px;
+  text-align: center;
+  color: #078ca8;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.backHome {
+  display: block;
+  margin-top: 22px;
+  text-align: center;
+  color: #718d98;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.signupPage {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background:
+    radial-gradient(circle at top right, #29d1dc, transparent 30%),
+    linear-gradient(145deg, #00354d, #087e99);
+}
+
+.signupCard {
+  width: 100%;
+  max-width: 520px;
+  padding: 45px;
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 25px 80px rgba(0, 35, 55, 0.3);
+}
+
+.signupCard h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.signupCard > p {
+  color: #718d98;
+  margin-bottom: 30px;
+}
+
+.signupCard label {
+  display: block;
+  margin: 15px 0 7px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #315b6b;
+}
+
+.signupCard input,
+.signupCard select {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #d7e7eb;
+  border-radius: 12px;
+  font-size: 15px;
+  background: white;
+}
+
+.signupPrimary {
+  width: 100%;
+  margin-top: 26px;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  background: #12bdd0;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.signupPrimary:disabled {
+  opacity: 0.6;
+}
